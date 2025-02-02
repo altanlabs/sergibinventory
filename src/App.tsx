@@ -1,5 +1,6 @@
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import "./App.css";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@/theme/theme-provider";
@@ -17,7 +18,7 @@ const App = () => {
     {
       path: "/",
       element: (
-        <Layout showSidebar={false} showHeader={false} showFooter={false} />
+        <Layout showSidebar={false} showHeader={true} showFooter={false} />
       ),
       errorElement: <RootBoundary />,
       children: [
@@ -34,9 +35,9 @@ const App = () => {
   ]);
 
   return (
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-      <Theme appearance={theme === "system" ? "light" : theme}>
-        <div className={theme}>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Theme appearance={theme === "system" ? "dark" : theme}>
+        <div className={`${theme} min-h-screen bg-background`}>
           <RouterProvider router={router} />
         </div>
       </Theme>

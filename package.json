@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@altanlabs/database": "^1.1.6",
     "@iconify/react": "^5.2.0",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-accordion": "^1.2.2",
