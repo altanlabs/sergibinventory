@@ -1,9 +1,9 @@
-import { Database } from '@altanlabs/database';
+import { createClient } from '@altanlabs/database';
 
 const API_BASE_URL = 'https://api.altan.ai/galaxia/hook/NZSDFo';
 const BASE_ID = '60fd38bb-0ce9-4cd2-a004-689cef089ac1';
 
-const db = new Database({
+const db = createClient({
   baseId: BASE_ID,
   apiUrl: API_BASE_URL,
 });
